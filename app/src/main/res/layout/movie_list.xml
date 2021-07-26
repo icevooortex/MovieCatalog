@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="3dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="120dp"
+                android:layout_height="185dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/photo1" />
+
+            <TextView
+                android:id="@+id/tv_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="17dp"
+                android:fontFamily="sans-serif-medium"
+                tools:text="Бегущий по лезвию 2049"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="@id/poster" />
+
+            <TextView
+                android:id="@+id/tv_subHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="134dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="sans-serif"
+                tools:text="Отставной детектив Рик Дкард вновь восстановлен в полиции Лос-Анджелеса"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@id/poster"
+                app:layout_constraintTop_toBottomOf="@id/tv_header" />
+
+            <ImageView
+                android:id="@+id/calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@id/poster"
+                app:layout_constraintTop_toBottomOf="@id/tv_subHeader"
+                app:srcCompat="@drawable/alendar" />
+
+            <TextView
+                android:id="@+id/data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif"
+                tools:text="1 января 2017"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@id/calendar"
+                app:layout_constraintTop_toBottomOf="@id/tv_subHeader" />
+
+            <ImageView
+                android:id="@+id/heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="17dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_subHeader"
+                app:srcCompat="@drawable/shape" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
